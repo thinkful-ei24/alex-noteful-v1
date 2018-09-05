@@ -1,4 +1,5 @@
 'use strict';
+const { PORT } = require('./config');
 
 const express = require('express');
 
@@ -12,7 +13,7 @@ console.log('Hello Noteful!');
 
 // add static server here
 app
-  .listen(8080, function() {
+  .listen(PORT, function() {
     console.info(`Server listening on ${this.address().port}`);
   })
   .on('error', err => {
