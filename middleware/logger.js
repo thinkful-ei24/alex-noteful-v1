@@ -8,4 +8,4 @@ function requestLogger(req, res, next) {
   next();
 }
 
-app.use(requestLogger);
+module.exports = { requestLogger };

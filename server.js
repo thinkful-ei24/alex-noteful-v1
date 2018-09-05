@@ -5,9 +5,13 @@ const express = require('express');
 
 const data = require('./db/notes');
 
+const { requestLogger } = require('./middleware/logger');
+
 const app = express();
 
 app.use(express.static('public'));
+
+app.use(requestLogger);
 
 console.log('Hello Noteful!');
 
